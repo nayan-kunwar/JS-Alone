@@ -50,4 +50,58 @@ console.log(inNumber);
     let stringNumber = String(someNumber) // someNumber(33) convert to => "33" string
     console.log(stringNumber);
     console.log(typeof stringNumber); // type of "33" is string
-    }
+}
+
+{
+    // *********************** Operations ***********************
+
+    let value = 3
+    let negValue = -value
+    // console.log(negValue);
+
+    // console.log(2+2);
+    // console.log(2-2);
+    // console.log(2*2);
+    // console.log(2**3);
+    // console.log(2/3);
+    // console.log(2%3);
+
+    let str1 = "hello"
+    let str2 = " aman"
+
+    let str3 = str1 + str2
+    console.log(str3);
+
+    // console.log("1" + 2);
+    // console.log(1 + "2");
+    // console.log("1" + 2 + 2); // 122=> string
+    // console.log(1 + 2 + "2"); // 32=> string | first 1+2 calculated
+
+    // console.log( (3 + 4) * 5 % 3);
+
+    //In the context of the unary plus operator (+), it is used for numeric [coercion], converting a [value] to a [number].
+    // console.log(+true); // Output: 1 [value] to a [number].
+    console.log(+""); // Output: 0 [value] to a [number].
+
+    let num1, num2, num3
+
+    num1 = num2 = num3 = 2 + 2
+
+    //Postfix and prefix operators
+
+    //Postfix: The postfix increment operator (x++) increments the value of x after its current value is used. [Value come different 5 6]
+    let x = 5;
+    let y = x++; // [Phle value used karo fir, increment karo]
+
+    console.log(x); // Output: 6 (value of x is incremented after being assigned to y)
+    console.log(y); // Output: 5 (original value of x)
+
+    //Prefix: The prefix increment operator (++x) increments the value of x before its current value is used. [Value come same 6 6]
+    let x2 = 5;
+    let y2 = ++x; // [Phle increment karo fir, used karo]
+
+    console.log(x2); // Output: 6 (value of x1 is incremented before being assigned to y2)
+    console.log(y2); // Output: 6 (new value of x1)
+
+
+}
