@@ -108,7 +108,7 @@ function greet(name) {
   }
   
   console.log("Sum:", sum(1, 2, 3, 4, 5));
-  
+   
   // Function Hoisting
   hoistedFunction(); // Outputs "I am hoisted!"
   
