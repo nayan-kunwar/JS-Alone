@@ -39,7 +39,7 @@ const myObject1 = {
     
 // }
 
-
+//--------------------------------------------
 
 const myObject2 = {
     js: 'javascript',
@@ -68,6 +68,7 @@ for (const key in programming) {
 //     console.log(key);
 // }
 
+//----------------------------------------------------------------------
 
 const coding = ["js", "ruby", "java", "python", "cpp"]
 
