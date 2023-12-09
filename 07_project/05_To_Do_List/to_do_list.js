@@ -14,6 +14,4 @@ function addTask(){
         taskInput.value = ''; // Cannot write inputValue as, it is a separate value not attached with input field
         addMessage.innerHTML = '';
     }
-    
-   
 }
