@@ -3,7 +3,7 @@ const form = document.querySelector("form");
 form.addEventListener('submit', (event) => {
     // The event.preventDefault() method is used to stop the default action of an HTML element from happening. 
     //In the context of your BMI calculator project, it is preventing the default form submission behavior when the "Calculate" button is clicked.
-    event.preventDefault();
+    event.preventDefault(); // This will not send the value of input field to server. Will stop those value.
     console.log(event);
 
     const height = document.querySelector("#height").value;
