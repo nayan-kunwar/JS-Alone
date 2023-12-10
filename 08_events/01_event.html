@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image | Click on any image to disappear it.</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="corn" src="https://images.pexels.com/photos/2875698/pexels-photo-2875698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="photoshop"></li>
+            <li><img width="200px" id="lake" src="https://images.pexels.com/photos/10574299/pexels-photo-10574299.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+            <li><img width="200px" id="cow" src="https://images.pexels.com/photos/5205221/pexels-photo-5205221.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+            <li><img width="200px" id="diya" src="https://images.pexels.com/photos/5406476/pexels-photo-5406476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" ></li>
+            <li><img width="200px" id="flower" src="https://images.pexels.com/photos/4716280/pexels-photo-4716280.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+   const ul =  document.getElementById('images');
+    // document.addEventListener('click', function (){}, false)
+    // Third parameter is event propogation , by default it is false as it given below.
+    //Two type of cocept is there - Bubbling and Capturing
+
+    ul.addEventListener('click', function (e){
+        // Default behaviour will not happen, like when clicking on google will not open the google website.
+        e.preventDefault(); 
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+            const parent = e.target.parentNode;
+            parent.remove();
+        }
+    })
+</script>
+</html>
