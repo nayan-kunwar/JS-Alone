@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>htnml Events </title>
+    <title>Events</title>
 </head>
 <body style="background-color: #414141; color: aliceblue;">
     <h2>Amazing image | Click on any image to disappear it.</h2>
@@ -19,11 +19,38 @@
    </div>
 </body>
 <script>
+     // document.getElementById('owl').onclick = function(){
+     //     alert("owl clicked")
+    // }
+
+     // attachEvent()
+    // jQuery - on
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // }, false)
+    
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+    // }, false)
+
    const ul =  document.getElementById('images');
+   
     // document.addEventListener('click', function (){}, false)
     // Third parameter is event propogation , by default it is false as it given below.
     //Two type of cocept is there - Bubbling and Capturing
-
     ul.addEventListener('click', function (e){
         // Default behaviour will not happen, like when clicking on google will not open the google website.
         e.preventDefault(); 
@@ -33,5 +60,7 @@
             parent.remove();
         }
     })
+
+    //parent.parentNode.removeChild(removeIt) Another way but not feasible
 </script>
 </html>

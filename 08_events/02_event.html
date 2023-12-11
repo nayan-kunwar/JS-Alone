@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event | setTimeout()</title>
+</head>
+<body>
+    <h1>Yes....</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // //Approach 1
+    // setTimeout(function(){
+    //     console.log(" After 2 second.");
+    // }, 2000);
+
+    // //Approach 2
+    // const funcDelay = function(){
+    //     console.log(" After 2 second.");
+    // }
+    // setTimeout(funcDelay, 2000) //Just pass reference of method -> funcDelay
+ 
+    //Project- When clicked on button remove setTimeout()
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "No...." // Dont use getElementsByid-> will not work find
+    }
+    const changeMe = setTimeout(changeText, 2000);
+
+    const _stop = document.getElementById('stop');
+   _stop.addEventListener('click', ()=>{
+    clearTimeout(changeMe); // This will not excute the function-> changeText after 2 second delay.
+   });
+</script>   
+</html>

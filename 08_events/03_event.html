@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event | setTimeinterval</title>
+</head>
+<body>
+    <h1>setInterval() and clearInterval</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <h4>Press <span style="color: red">Start</span> button to start printing on console. </h4>
+    <h4>Press <span style="color: red">Stop</span> button to stop printing on console. </h4>
+</body>
+<script>
+    //The function will excecute after every 1 second.
+    //Approach 1
+    // setInterval(function(){
+    //     console.log(`Hi ${Date.now()}`)
+    // }, 1000);
+
+     //Approach 2
+    // const sayHi = function(){
+    //     console.log(`Hi ${Date.now()}`)
+    //  }
+    //  setInterval(sayHi, 1000)
+
+    //Pass third parameter in setInterval()
+    //  const sayHi = function(str){
+    //     console.log(`${str} ${Date.now()}`) 
+    //  }
+    // const stopInterval = setInterval(sayHi, 1000, 'Hi')
+    // clearInterval(stopInterval)
+
+    //Project- When clicked on start button printing start and when clicked on stop button printing stop.
+    let printInterval;
+    const startButton = document.querySelector('#start');
+    const stopButton = document.querySelector('#stop');
+
+    // Will start printing when clicked on start button
+    startButton.addEventListener('click', () => {
+        const sayHi = function(str){
+            console.log(`${str} ${Date.now()}`)
+        }
+        printInterval = setInterval(sayHi, 1000, 'Hi')
+    });
+
+    // Will stop printing, when clicked on start button 
+    stopButton.addEventListener('click', () => {
+        clearInterval(printInterval)
+    });
+</script>   
+</html>
