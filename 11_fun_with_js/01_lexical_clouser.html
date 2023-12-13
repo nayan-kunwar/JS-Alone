@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+
+    <script>
+    // Lexical Scope - inner fuction can access outer function property but outer function cannot access inner fuction property
+    function outer(){
+        let username = "hitesh"
+        console.log("OUTER", secret);
+        function inner(){
+            let secret = "my123"
+            console.log("inner", username);
+        }
+        function innerTwo(){
+            console.log("innerTwo", username);
+            console.log(secret);
+        }
+        inner()
+        innerTwo()
+
+    }
+    outer()
+    console.log("TOO OUTER", username);
+
+// Clouser
+    function makeFunc() {
+        const name = "Mozilla";
+        function displayName() {
+            console.log(name);
+        }
+        return displayName; // When fuction return then its lexical scope also return means now we can access name outside the whole lexical scope as shown below
+    }
+
+    const myFunc = makeFunc();
+    myFunc(); // Here, name is accessible, as it will display name.
+
+    </script>
+    <script>
+        // document.getElementById("orange").onclick = function(){
+        //     document.body.style.backgroundColor = `orange`
+        // }
+        // document.getElementById("green").onclick = function(){
+        //     document.body.style.backgroundColor = `green`
+        // }
+// The above situation is a problem we have to write same code again and again.
+
+// Solution
+        function clickHandler(color){
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('green').onclick = clickHandler("green")
+
+    </script>
+</html>
