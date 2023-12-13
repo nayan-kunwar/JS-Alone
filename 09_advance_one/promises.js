@@ -117,3 +117,6 @@ fetch('https://api.github.com/users/nayan-kunwar')
     console.log(data);
 })
 .catch((error) => console.log(error))
+
+// The above will execute first then other will execute as fetch has high priority then others then() and catch().
+// Read about fetch more -source: https://developer.mozilla.org/en-US/docs/Web/API/fetch

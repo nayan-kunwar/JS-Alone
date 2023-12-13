@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React {
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:3000"
+
+            //requirement
+            document
+                .querySelector('button')
+                //.addEventListener('click', this.handleClick) If we do this then we will not get ->  console.log(this.server); output. | this hss a reference of  <button>Button Clicked</button> but we are not getting our value.
+                // because button called  handleClick(){} , aur joh bhi call krta hai uska reference hota hai [this] mai.  i.e -> console.log(this.server);
+                .addEventListener('click', this.handleClick.bind(this)) // To solve this we ahve to use --- bind --- keyword
+                // .bind(this) -> It will bind ---this--- keyword forcefully so that it this will refer to all property of current click on handleClick() method
+}
+        handleClick(){
+            console.log("button clicked");
+            console.log(this.server);
+        }
+    }
+
+    const app = new React()
+</script>
+</html>
