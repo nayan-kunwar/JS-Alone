@@ -34,7 +34,7 @@ const str = "abcdefghijklmn opqrstuvwxyz";
 console.log(str.slice(-3));        // 'xyz'
 console.log(str.slice(-3, -1));    // 'xy'
 console.log(str.slice(0, -1));     // 'abcdefghijklmn opqrstuvwxy'
-console.log(str.slice(4, -1));      // 'efghijklmn opqrstuvwxy'
+console.log(str.slice(4, -1));     // 'efghijklmn opqrstuvwxy'
 console.log(str.slice(2, -5));    // 'cdefghijklmn opqrst'
 console.log(str.slice(-12, -7));  // 'mno op'
 console.log(str.slice(1, -10));   // 'bcdefghij'

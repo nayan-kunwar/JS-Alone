@@ -54,7 +54,7 @@ const addTwo = function(num){
 // Function Declaration
 function greet(name) {
     console.log("Hello, " + name + "!");
-  }
+}
   
   greet("John");
   
